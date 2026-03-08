@@ -1,0 +1,1 @@
+export { StockItem } from './StockItem';
