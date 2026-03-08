@@ -8,7 +8,7 @@ const http = require('http');
 const express = require('express');
 const cors = require('cors');
 const { WebSocketServer, OPEN } = require('ws');
-const { getAvailableTickers } = require('./csvParser');
+const { getAvailableTickers, getLatestClose } = require('./csvParser');
 
 const HTTP_PORT = process.env.MARKET_HTTP_POST || 3002;
 const WS_PORT = process.env.MARKET_WS_PORT || 3003;
