@@ -1,7 +1,7 @@
-const express = require('express');
-const jwt = require('jsonwebtoken');
-const cors = require('cors');
-require('dotenv').config();
+import express from 'express';
+import jwt from 'jsonwebtoken';
+import cors from 'cors';
+import 'dotenv/config';
 
 const app = express();
 app.use(express.json());
@@ -35,4 +35,4 @@ const verifyToken = (req, res, next) => {
 };
 
 app.listen(PORT, () => console.log(`Auth Service running on port ${PORT}`));
-module.exports = { verifyToken };  // For inter-service use
+export { verifyToken };  // For inter-service use
