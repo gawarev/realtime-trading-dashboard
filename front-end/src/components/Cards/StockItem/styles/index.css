@@ -75,3 +75,55 @@
 .stock-change.negative {
   color: #dc3545;
 }
+
+.stock-item--active {
+  border-left: 3px solid #1a1a2e;
+  background-color: #f0f0f8;
+}
+
+.stock-item--active:hover {
+  background-color: #e8e8f4;
+}
+
+@media (max-width: 640px) {
+  .stock-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 10px;
+    min-width: 82px;
+    border-bottom: none;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    flex-shrink: 0;
+  }
+
+  .stock-item--active {
+    border-left: 1px solid #1a1a2e;
+    border-color: #1a1a2e;
+    background-color: #f0f0f8;
+  }
+
+  .stock-item--active:hover {
+    background-color: #e8e8f4;
+  }
+
+  .stock-item-left {
+    display: none;
+  }
+
+  .stock-item-right {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .stock-name {
+    display: none;
+  }
+
+  .stock-code {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+  }
+}

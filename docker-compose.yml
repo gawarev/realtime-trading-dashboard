@@ -1,0 +1,28 @@
+services:
+  auth-service:
+    build:
+      context: ./backend_service/auth_service
+    ports:
+      - "3001:3001"
+    environment:
+      JWT_SECRET: "change_this_in_production"
+    restart: unless-stopped
+
+  market-data:
+    build:
+      context: ./backend_service
+      dockerfile: market_data_service/Dockerfile
+    ports:
+      - "3002:3002"
+      - "3003:3003"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./front-end
+    ports:
+      - "80:80"
+    depends_on:
+      - auth-service
+      - market-data
+    restart: unless-stopped
