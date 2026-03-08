@@ -2,6 +2,8 @@
 
 A realtime stock trading dashboard for Indian stocks with simulated price feeds.
 
+<img width="1440" height="741" alt="Screenshot 2026-03-08 at 10 52 37 PM" src="https://github.com/user-attachments/assets/9981b115-3be5-4d1b-b8f7-0a1617036579" />
+
 ## Architecture
 
 | Service | Description | Port(s) |
