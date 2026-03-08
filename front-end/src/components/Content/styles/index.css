@@ -1,0 +1,103 @@
+.content-ticker-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .content-ticker-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+
+  .content-live-price {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a2e;
+  }
+
+  .content-change {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .content-change.positive {
+    color: #22c55e;
+  }
+
+  .content-change.negative {
+    color: #ef4444;
+  }
+
+  .chart-wrapper {
+    position: relative;
+    height: 380px;
+    width: 100%;
+  }
+
+  .chart-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 380px;
+    color: #888;
+    font-size: 14px;
+  }
+
+  .time-range-selector {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+
+  .range-btn {
+    padding: 6px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    color: #555;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .range-btn:hover {
+    border-color: #aaa;
+    color: #222;
+  }
+
+  .range-btn--active {
+    background: #1a1a2e;
+    border-color: #1a1a2e;
+    color: #fff;
+  }
+
+  @media (max-width: 640px) {
+    .content-ticker-header {
+      flex-wrap: wrap;
+      gap: 4px 10px;
+      margin-bottom: 12px;
+    }
+
+    .content-ticker-name {
+      font-size: 17px;
+    }
+
+    .content-live-price {
+      font-size: 18px;
+    }
+
+    .chart-wrapper,
+    .chart-empty {
+      height: 260px;
+    }
+
+    .range-btn {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  }
+  
