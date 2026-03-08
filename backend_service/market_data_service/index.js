@@ -66,6 +66,11 @@ app.get('/history/:ticker', (req, res) => {
     res.json({ ticker, count: result.length, order, data: result });
 });
 
+/** GET /tickers/snapshot/all — live snapshot for all tickers */
+app.get('/snapshot/all', (_req, res) => {
+  res.json(simulator.allSnapshots());
+});
+
 const httpServer = http.createServer(app);
 httpServer.listen(HTTP_PORT, () => {
     console.log(`[market-data] REST API listening on http://localhost:${HTTP_PORT}`);

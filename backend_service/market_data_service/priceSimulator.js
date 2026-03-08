@@ -57,6 +57,30 @@ class PriceSimulator {
             timestamp: new Date().toISOString(),
         };
     }
+
+    snapshot(ticker) {
+        const s = this.state[ticker];
+        if (!s) return null;
+        const change    = parseFloat((s.currentPrice - s.prevClose).toFixed(2));
+        const changePct = parseFloat(((change / s.prevClose) * 100).toFixed(4));
+
+        return {
+            ticker,
+            price: s.currentPrice,
+            open: s.openPrice,
+            high: s.dayHigh,
+            low: s.dayLow,
+            prevClose: s.prevClose,
+            change,
+            changePct,
+            volume: s.volume,
+            timestamp: new Date().toISOString(),
+        };
+    }
+
+    allSnapshots() {
+        return this.tickers.map((t) => this.snapshot(t));
+    }
 }
 
 module.exports = PriceSimulator;

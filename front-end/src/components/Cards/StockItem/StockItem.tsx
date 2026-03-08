@@ -6,13 +6,15 @@ export interface StockItemProps {
   code: string;
   price: number;
   changePercentage: number;
+  isActive: boolean;
+  onClick: () => void;
 }
 
-export const StockItem = ({ logo, name, code, price, changePercentage }: StockItemProps) => {
+export const StockItem = ({ logo, name, code, price, changePercentage, isActive, onClick }: StockItemProps) => {
   const isPositive = changePercentage >= 0;
 
   return (
-    <div className="stock-item">
+    <div className={`stock-item${isActive ? ' stock-item--active' : ''}`} onClick={onClick}>
       <div className="stock-item-left">
         <img src={logo} alt={name} className="stock-logo" />
       </div>
