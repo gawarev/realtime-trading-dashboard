@@ -6,14 +6,14 @@ import './App.css';
 import {Login} from "./components/Login";
 
 function App() {
-  const { isAuthenticated, login } = useAuth();
+  const { isAuthenticated, login, logout } = useAuth();
   console.log('isAuthenticated: ', isAuthenticated);
   if (!isAuthenticated) {
     return <Login onLogin={login} />;
   }
   return (
     <div className="app-grid-container">
-      <Header />
+      <Header status="connecting" onLogout={logout} />
       <Content />
       <WatchList />
     </div>

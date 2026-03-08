@@ -1,0 +1,66 @@
+.header-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.header-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.logout-btn {
+    margin-left: auto;
+    background: transparent;
+    border: 1px solid #475569;
+    border-radius: 5px;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 4px 12px;
+    transition: border-color 0.15s, color 0.15s;
+}
+
+.logout-btn:hover {
+    border-color: #94a3b8;
+    color: #f1f5f9;
+}
+@media (max-width: 640px) {
+    .app-grid-container {
+      grid-template-areas:
+        "header"
+        "sidebar"
+        "content";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr;
+    }
+
+    .app-header {
+      padding: 10px 14px;
+      gap: 10px;
+    }
+
+    .header-title {
+      font-size: 15px;
+    }
+
+    .app-watchlist {
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 12px;
+    }
+
+    .app-content {
+      padding: 14px;
+    }
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
