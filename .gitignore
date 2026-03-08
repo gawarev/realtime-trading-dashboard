@@ -1,3 +1,5 @@
 .DS_Store
 /backend_service/auth_service/node_modules/
+/backend_service/auth_service/.idea/
 /backend_service/market_data_service/node_modules/
+/backend_service/market_data_service/.idea/
